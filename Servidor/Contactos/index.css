@@ -1,0 +1,246 @@
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+
+}
+.list-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  margin: 1.5rem;
+  box-shadow: 0 0.5em 1em rgba(0,0,0,0.5);
+}
+
+body, p, ul {
+  margin: 0;
+  
+}
+#list{
+  width: 50%;
+  max-height: 17rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  border-radius: 0.8rem;
+  overflow: auto;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  background: linear-gradient( 1deg, #8052ec, #d161ff );
+  height: 100vh;
+  margin: 0 auto;
+    display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+/* Formulario */
+
+
+.helper-form {
+  display: none;
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+
+
+
+
+.edit-inputs-container {
+  flex-grow: 0.5;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: inherit;
+  transition: all 0.175s ease-in-out;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.edit-input:focus {
+ outline: none;
+}
+
+#form{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  border-radius: 0.5rem;
+ overflow: auto;
+}
+.input-form{
+  width: 100%;
+  outline: none;
+  font-size: 1.125rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column; 
+  background-color: #f1f5f9;
+}
+
+#form-btn{
+ background-color: #5a95ff;
+ margin-top: 1.5rem;
+ padding: 0.5rem;
+ border-radius: 0.5rem;
+ color: #fff;
+ font-size: 1.25rem;
+
+}
+
+
+.edit-icon, .delete-icon {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  transition: all 0.175s ease-in-out;
+  
+}
+
+.edit-icon {
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+.edit-icon:hover {
+  color: #fff;
+  background-color: #22c55e;
+}
+.delete-icon {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.delete-icon:hover {
+  color: #fff;
+  background-color: #ef4444;
+}
+
+
+.edit-icon:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.show-input {
+  outline: 2px solid #94a3b8;
+}
+
+.show-input:focus {
+  outline: 2px solid #94a3b8;
+}
+
+.show {
+  display: block;
+}
+
+.correct:focus {
+  outline: 2px solid green;
+}
+
+.error:focus {
+  outline: 2px solid red;
+}
+
+@media (min-width: 768px) {
+  .edit-inputs-container {
+    flex-direction: row;
+  }
+  
+  .edit-input {
+    width: 50%;
+  }
+  .edit-inputs-container{
+    flex-grow: 1;
+  }
+  #form{
+    width: 50%;
+  }
+  html{
+    height: 100%;
+  }
+}
+
+@media (max-width: 770px){
+ #list{
+  width: 100%;
+ }
+}
+
+@media (max-width: 425px){
+  .edit-inputs-container{
+    flex-grow: 1;
+  }
+  .edit-inputs-container {
+    flex-direction: column;
+  }
+  .title{
+    height: auto;
+  }
+  #list{
+    width: 100%;
+  }
+ 
+}
+@media (max-width: 320px){
+  #form{
+    padding: 2rem;
+  }
+}
